@@ -1,0 +1,32 @@
+networks:
+  my-network:
+services:
+  read:
+    build: 
+      context: .
+      dockerfile: './read_service/DockerFile'
+    ports:
+      - '5001:5001'
+    networks:
+      - my-network
+  write:
+    build: 
+      context: .
+      dockerfile: './write_service/DockerFile'
+    ports:
+      - '5000:5000'
+    networks:
+      - my-network  
+    
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: python_app
+    ports:
+      - "3306:3306"
+    networks:
+      - my-network

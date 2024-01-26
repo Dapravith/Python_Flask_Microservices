@@ -1,0 +1,30 @@
+version: "2.18.1"
+networks: 
+    my_network:
+services:
+  
+  read-services:
+    build: ./read_service
+    ports:
+      - "5002:5002"
+    networks:
+      - my_network
+  write-services:
+    build: ./write_service
+    ports:
+      - "5001:5001"
+    networks:
+      - my_network
+  database:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: microservice_database_app
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_USER: dapravith
+      MYSQL_PASSWORD: 12345
+    ports:
+      - "3306:3306"
+    networks:
+      - my_network

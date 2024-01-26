@@ -1,0 +1,18 @@
+{
+    "sourceFile": "DockerCommandLine.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1705969668280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1705969668280,
+            "name": "Commit-0",
+            "content": "docker build -t read-service ./read-service \n\ndocker run -d -p 5000:5000 read-service \n\ndocker build -t write-service ./write-service \n\ndocker run -d -p 5000:5001 write-service \n\n  \n\ndocker pull mysql \n\ndocker run –-name mysql-service -e MYSQL_ROOT_PASSWORD=xxxx -d mysql "
+        }
+    ]
+}

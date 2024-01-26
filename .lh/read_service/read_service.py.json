@@ -1,0 +1,154 @@
+{
+    "sourceFile": "read_service/read_service.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 34,
+            "patches": [
+                {
+                    "date": 1705970020482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705970031949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705977508639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705977644582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705977963033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:12345@172.23.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705978139522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:12345@172.23.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705981225788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.25.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705985756935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.25.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.25.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705985862518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.25.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.26.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705985995533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.26.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.26.0.2:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705986435084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.26.0.2:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.26.0.2:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705986858218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.26.0.2:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.27.0.1:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705986988827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.27.0.1:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.27.0.1:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705987294032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.27.0.1:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.27.0.1:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705988387288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.27.0.1:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@172.27.0.1:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705988558404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@172.27.0.1:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@127.0.0.1:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705990018929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@127.0.0.1:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@172.29.0.4:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1705990074448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@172.29.0.4:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.29.0.4:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706004977257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,21 @@\n-from flask import Flask, request, jsonify\r\n-from flask_sqlalchemy import SQLAlchemy\r\n+from flask import Flask, jsonify\r\n+from flask_pymongo import PyMongo\r\n+from bson.json_util import dumps\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.29.0.4:3307/python_app'\r\n-db = SQLAlchemy(app)\r\n \r\n-class Item(db.Model):\r\n-    id = db.Column(db.Integer, primary_key=True)\r\n-    name = db.Column(db.String(80), nullable=False)\r\n+# Configure the MongoDB settings: the Database URI and the Database Name\r\n+app.config[\"MONGO_URI\"] = \"mongodb://localhost:27017/myDatabase\"\r\n+mongo = PyMongo(app)\r\n \r\n-@app.before_request\r\n-def create_tables():\r\n-    db.create_all()\r\n+# Reference to the collection\r\n+items_collection = mongo.db.items\r\n \r\n @app.route('/items', methods=['GET'])\r\n-def handle_items():\r\n+def get_items():\r\n+    items = items_collection.find({})\r\n+    # Using dumps from bson.json_util to convert cursor to JSON directly\r\n+    return dumps(items), 200\r\n \r\n-    items = Item.query.all()\r\n-    return jsonify([{'id': item.id, 'name': item.name} for item in items])\r\n-\r\n if __name__ == '__main__':\r\n     app.run(debug=True, port=5002, host=\"0.0.0.0\")\r\n"
+                },
+                {
+                    "date": 1706005314785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n app = Flask(__name__)\r\n \r\n # Configure the MongoDB settings: the Database URI and the Database Name\r\n-app.config[\"MONGO_URI\"] = \"mongodb://localhost:27017/myDatabase\"\r\n+app.config[\"MONGO_URI\"] = \"mongodb://localhost:172.29.0.2:27017/myDatabase\"\r\n mongo = PyMongo(app)\r\n \r\n # Reference to the collection\r\n items_collection = mongo.db.items\r\n"
+                },
+                {
+                    "date": 1706006723314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,28 @@\n from flask import Flask, jsonify\r\n-from flask_pymongo import PyMongo\r\n-from bson.json_util import dumps\r\n+from flask_sqlalchemy import SQLAlchemy\r\n+from werkzeug.utils import url_quote  # Import url_quote from werkzeug.utils\r\n \r\n app = Flask(__name__)\r\n \r\n-# Configure the MongoDB settings: the Database URI and the Database Name\r\n-app.config[\"MONGO_URI\"] = \"mongodb://localhost:172.29.0.2:27017/myDatabase\"\r\n-mongo = PyMongo(app)\r\n+# app = Flask(__name__)\r\n+# Update the MySQL connection string\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@172.18.0.2:3306/cloud_computing' \r\n+# Disable the Flask-SQLAlchemy track modifications feature to suppress a warning\r\n+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\r\n+db = SQLAlchemy(app)\r\n \r\n-# Reference to the collection\r\n-items_collection = mongo.db.items\r\n+class Item(db.Model):\r\n+    id = db.Column(db.Integer, primary_key=True)\r\n+    name = db.Column(db.String(80), nullable=False)\r\n \r\n+@app.before_request\r\n+def create_tables():\r\n+    db.create_all()\r\n+\r\n @app.route('/items', methods=['GET'])\r\n-def get_items():\r\n-    items = items_collection.find({})\r\n-    # Using dumps from bson.json_util to convert cursor to JSON directly\r\n-    return dumps(items), 200\r\n+def handle_items():\r\n+    items = Item.query.all()\r\n+    return jsonify([{'id': item.id, 'name': item.name} for item in items])\r\n \r\n if __name__ == '__main__':\r\n-    app.run(debug=True, port=5002, host=\"0.0.0.0\")\r\n+    app.run(debug=True, port=5001,host=\"0.0.0.0\")\r\n"
+                },
+                {
+                    "date": 1706006860500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n app = Flask(__name__)\r\n \r\n # app = Flask(__name__)\r\n # Update the MySQL connection string\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@172.18.0.2:3306/cloud_computing' \r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@172.18.0.2:3306/microservices' \r\n # Disable the Flask-SQLAlchemy track modifications feature to suppress a warning\r\n app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\r\n db = SQLAlchemy(app)\r\n \r\n"
+                },
+                {
+                    "date": 1706007295227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n app = Flask(__name__)\r\n \r\n # app = Flask(__name__)\r\n # Update the MySQL connection string\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@172.18.0.2:3306/microservices' \r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@172.18.0.2:3306/python_app' \r\n # Disable the Flask-SQLAlchemy track modifications feature to suppress a warning\r\n app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\r\n db = SQLAlchemy(app)\r\n \r\n"
+                },
+                {
+                    "date": 1706007447467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,9 @@\n-from flask import Flask, jsonify\r\n+from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n-from werkzeug.utils import url_quote  # Import url_quote from werkzeug.utils\r\n \r\n app = Flask(__name__)\r\n-\r\n-# app = Flask(__name__)\r\n-# Update the MySQL connection string\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@172.18.0.2:3306/python_app' \r\n-# Disable the Flask-SQLAlchemy track modifications feature to suppress a warning\r\n-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.29.0.4:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n@@ -20,9 +14,10 @@\n     db.create_all()\r\n \r\n @app.route('/items', methods=['GET'])\r\n def handle_items():\r\n+\r\n     items = Item.query.all()\r\n     return jsonify([{'id': item.id, 'name': item.name} for item in items])\r\n \r\n if __name__ == '__main__':\r\n-    app.run(debug=True, port=5001,host=\"0.0.0.0\")\r\n+    app.run(debug=True, port=5002, host=\"0.0.0.0\")\r\n"
+                },
+                {
+                    "date": 1706007743979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.29.0.4:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.30.0.3:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706007784392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.30.0.3:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@172.30.0.3:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706008161201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@172.30.0.3:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.30.0.3:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706008595820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@172.30.0.3:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@host.docker.internal:3307/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706013214820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@host.docker.internal:3307/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@172.22.0.2:3306//python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706013280544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@172.22.0.2:3306//python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@172.22.0.2:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706013824924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@172.22.0.2:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.3:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706014346471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.3:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.2:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706014755401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.2:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.4:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706015422219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.4:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.2:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                },
+                {
+                    "date": 1706015674755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n from flask import Flask, request, jsonify\r\n from flask_sqlalchemy import SQLAlchemy\r\n \r\n app = Flask(__name__)\r\n-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234566789@192.168.0.2:3306/python_app'\r\n+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@192.168.0.2:3306/python_app'\r\n db = SQLAlchemy(app)\r\n \r\n class Item(db.Model):\r\n     id = db.Column(db.Integer, primary_key=True)\r\n"
+                }
+            ],
+            "date": 1705970020482,
+            "name": "Commit-0",
+            "content": "from flask import Flask, request, jsonify\r\nfrom flask_sqlalchemy import SQLAlchemy\r\n\r\napp = Flask(__name__)\r\napp.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456789@172.23.0.2:3306/python_app'\r\ndb = SQLAlchemy(app)\r\n\r\nclass Item(db.Model):\r\n    id = db.Column(db.Integer, primary_key=True)\r\n    name = db.Column(db.String(80), nullable=False)\r\n\r\n@app.before_request\r\ndef create_tables():\r\n    db.create_all()\r\n\r\n@app.route('/items', methods=['GET'])\r\ndef handle_items():\r\n\r\n    items = Item.query.all()\r\n    return jsonify([{'id': item.id, 'name': item.name} for item in items])\r\n\r\nif __name__ == '__main__':\r\n    app.run(debug=True, port=5002, host=\"0.0.0.0\")\r\n"
+        }
+    ]
+}

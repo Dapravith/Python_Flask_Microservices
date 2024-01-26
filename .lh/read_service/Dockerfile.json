@@ -1,0 +1,58 @@
+{
+    "sourceFile": "read_service/Dockerfile",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1705970449182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705970466352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-FROM python:3.9\n+FROM python:3.9.6\n \n WORKDIR /app \n \n COPY ./ app \n"
+                },
+                {
+                    "date": 1705978957060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n WORKDIR /app \n \n COPY ./ app \n \n-RUN pip install Flask Flask-SQLAlchemy PyMySQL \n+RUN pip install --no-cache-dir Flask==2.1.1 Flask-SQLAlchemy==2.4 SQLAlchemy==1.3.24 Werkzeug==2.0.0 pymysql\n \n EXPOSE 5001\n \n CMD [\"python\", \"read_service.py\"] \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705979703049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n FROM python:3.9.6\n \n WORKDIR /app \n \n-COPY ./ app \n+COPY . app \n \n-RUN pip install --no-cache-dir Flask==2.1.1 Flask-SQLAlchemy==2.4 SQLAlchemy==1.3.24 Werkzeug==2.0.0 pymysql\n+RUN pip install -r requirement.txt\n \n EXPOSE 5001\n \n CMD [\"python\", \"read_service.py\"] \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705980712592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n COPY . app \n \n RUN pip install -r requirement.txt\n \n-EXPOSE 5001\n+EXPOSE 5002\n \n CMD [\"python\", \"read_service.py\"] \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705980826461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n FROM python:3.9.6\n \n WORKDIR /app \n \n-COPY . app \n+COPY . /app \n \n RUN pip install -r requirement.txt\n \n EXPOSE 5002\n"
+                },
+                {
+                    "date": 1705981415384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-FROM python:3.9.6\n+FROM python:3.9\n \n WORKDIR /app \n \n COPY . /app \n"
+                },
+                {
+                    "date": 1705982114707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n WORKDIR /app \n \n COPY . /app \n \n-RUN pip install -r requirement.txt\n+RUN pip install flask flask_sqlalchemy mysql-connector-python\n \n EXPOSE 5002\n \n CMD [\"python\", \"read_service.py\"] \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705982312097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n WORKDIR /app \n \n COPY . /app \n \n-RUN pip install flask flask_sqlalchemy mysql-connector-python\n+RUN pip install flask flask_sqlalchemy pymysql\n \n EXPOSE 5002\n \n CMD [\"python\", \"read_service.py\"] \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706005195863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n WORKDIR /app \n \n COPY . /app \n \n-RUN pip install flask flask_sqlalchemy pymysql\n+RUN pip install flask Flask-PyMongo\n \n EXPOSE 5002\n \n CMD [\"python\", \"read_service.py\"] \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706007519485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n WORKDIR /app \n \n COPY . /app \n \n-RUN pip install flask Flask-PyMongo\n+RUN pip install flask flask_sqlalchemy pymysql\n \n EXPOSE 5002\n \n CMD [\"python\", \"read_service.py\"] \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1705970449182,
+            "name": "Commit-0",
+            "content": "FROM python:3.9\n\nWORKDIR /app \n\nCOPY ./ app \n\nRUN pip install Flask Flask-SQLAlchemy PyMySQL \n\nEXPOSE 5001\n\nCMD [\"python\", \"read_service.py\"] "
+        }
+    ]
+}

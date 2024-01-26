@@ -1,0 +1,98 @@
+{
+    "sourceFile": "docker-compose.yml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1705977522497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705977708982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       MYSQL_ROOT_PASSWORD: 12345\r\n       MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 12345\r\n     ports:\r\n-      - \"3306:3306\"\r\n+      - \"3307:3306\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705977955185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     image: mysql:latest\r\n     command: --default-authentication-plugin=mysql_native_password\r\n     restart: always\r\n     environment:\r\n-      MYSQL_DATABASE: microservice_database_app\r\n+      MYSQL_DATABASE: python_app\r\n       MYSQL_ROOT_PASSWORD: 12345\r\n       MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 12345\r\n     ports:\r\n"
+                },
+                {
+                    "date": 1705978154006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,11 @@\n     command: --default-authentication-plugin=mysql_native_password\r\n     restart: always\r\n     environment:\r\n       MYSQL_DATABASE: python_app\r\n-      MYSQL_ROOT_PASSWORD: 12345\r\n+      MYSQL_ROOT_PASSWORD: 123456789\r\n       MYSQL_USER: dapravith\r\n-      MYSQL_PASSWORD: 12345\r\n+      MYSQL_PASSWORD: 123456789\r\n     ports:\r\n       - \"3307:3306\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705978475098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     restart: always\r\n     environment:\r\n       MYSQL_DATABASE: python_app\r\n       MYSQL_ROOT_PASSWORD: 123456789\r\n-      MYSQL_USER: dapravith\r\n+      MYSQL_USER: root\r\n       MYSQL_PASSWORD: 123456789\r\n     ports:\r\n       - \"3307:3306\"\r\n     networks:\r\n"
+                },
+                {
+                    "date": 1705979883224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,10 +21,10 @@\n     restart: always\r\n     environment:\r\n       MYSQL_DATABASE: python_app\r\n       MYSQL_ROOT_PASSWORD: 123456789\r\n-      MYSQL_USER: root\r\n+      MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"3307:3306\"\r\n+      - \"3307:3307\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705986010576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       MYSQL_ROOT_PASSWORD: 123456789\r\n       MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"3307:3307\"\r\n+      - \"3306:3306\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705986449147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       MYSQL_ROOT_PASSWORD: 123456789\r\n       MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"3306:3306\"\r\n+      - \"3307:3307\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705986960741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       MYSQL_ROOT_PASSWORD: 123456789\r\n       MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"3307:3307\"\r\n+      - \"3306:3306\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705987307806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       MYSQL_ROOT_PASSWORD: 123456789\r\n       MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"3306:3306\"\r\n+      - \"3307:3307\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705988215453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,16 +15,16 @@\n       - \"5001:5001\"\r\n     networks:\r\n       - my_network\r\n   database:\r\n-    image: mysql:latest\r\n+    image: mariadb:latest\r\n     command: --default-authentication-plugin=mysql_native_password\r\n     restart: always\r\n     environment:\r\n       MYSQL_DATABASE: python_app\r\n-      MYSQL_ROOT_PASSWORD: 123456789\r\n+      MYSQL_ROOT_PASSWORD: 1234\r\n       MYSQL_USER: dapravith\r\n-      MYSQL_PASSWORD: 123456789\r\n+      MYSQL_PASSWORD: 1234\r\n     ports:\r\n-      - \"3307:3307\"\r\n+      - \"3307:3306\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705990063004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,11 @@\n     command: --default-authentication-plugin=mysql_native_password\r\n     restart: always\r\n     environment:\r\n       MYSQL_DATABASE: python_app\r\n-      MYSQL_ROOT_PASSWORD: 1234\r\n+      MYSQL_ROOT_PASSWORD: 123456789\r\n       MYSQL_USER: dapravith\r\n-      MYSQL_PASSWORD: 1234\r\n+      MYSQL_PASSWORD: 123456789\r\n     ports:\r\n       - \"3307:3306\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705990527814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       - \"5001:5001\"\r\n     networks:\r\n       - my_network\r\n   database:\r\n-    image: mariadb:latest\r\n+    image: mysql:latest\r\n     command: --default-authentication-plugin=mysql_native_password\r\n     restart: always\r\n     environment:\r\n       MYSQL_DATABASE: python_app\r\n"
+                },
+                {
+                    "date": 1706005056350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,16 +15,19 @@\n       - \"5001:5001\"\r\n     networks:\r\n       - my_network\r\n   database:\r\n-    image: mysql:latest\r\n-    command: --default-authentication-plugin=mysql_native_password\r\n+    image: mongo:latest\r\n     restart: always\r\n     environment:\r\n-      MYSQL_DATABASE: python_app\r\n-      MYSQL_ROOT_PASSWORD: 123456789\r\n-      MYSQL_USER: dapravith\r\n-      MYSQL_PASSWORD: 123456789\r\n+      MONGO_INITDB_ROOT_USERNAME: root\r\n+      MONGO_INITDB_ROOT_PASSWORD: 123456789\r\n+      MONGO_INITDB_DATABASE: python_app\r\n\\ No newline at end of file\n     ports:\r\n-      - \"3307:3306\"\r\n+      - \"27017:27017\"  # Default port for MongoDB\r\n     networks:\r\n-      - my_network\n+      - my_network\r\n+    volumes:\r\n+      - mongo-data:/data/db\r\n+\r\n+volumes:\r\n+  mongo-data:\r\n"
+                },
+                {
+                    "date": 1706006766607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,33 +1,32 @@\n-version: \"2.18.1\"\r\n-networks: \r\n-    my_network:\r\n+networks:\r\n+  my-network:\r\n services:\r\n-  \r\n-  read-services:\r\n-    build: ./read_service\r\n+  read:\r\n+    build: \r\n+      context: .\r\n+      dockerfile: './read_service/DockerFile'\r\n     ports:\r\n-      - \"5002:5002\"\r\n+      - '5001:5001'\r\n     networks:\r\n-      - my_network\r\n-  write-services:\r\n-    build: ./write_service\r\n+      - my-network\r\n+  write:\r\n+    build: \r\n+      context: .\r\n+      dockerfile: './write_service/DockerFile'\r\n     ports:\r\n-      - \"5001:5001\"\r\n+      - '5000:5000'\r\n     networks:\r\n-      - my_network\r\n-  database:\r\n-    image: mongo:latest\r\n+      - my-network  \r\n+    \r\n+  db:\r\n+    image: mysql:8.0\r\n+    command: --default-authentication-plugin=mysql_native_password\r\n     restart: always\r\n     environment:\r\n-      MONGO_INITDB_ROOT_USERNAME: root\r\n-      MONGO_INITDB_ROOT_PASSWORD: 123456789\r\n-      MONGO_INITDB_DATABASE: python_app\r\n+      MYSQL_ROOT_PASSWORD: \"\"\r\n+      MYSQL_ALLOW_EMPTY_PASSWORD: \"yes\"\r\n+      MYSQL_DATABASE: cloud_computing\r\n     ports:\r\n-      - \"27017:27017\"  # Default port for MongoDB\r\n+      - \"3306:3306\"\r\n     networks:\r\n-      - my_network\r\n-    volumes:\r\n-      - mongo-data:/data/db\r\n-\r\n-volumes:\r\n-  mongo-data:\r\n+      - my-network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706006794072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     restart: always\r\n     environment:\r\n       MYSQL_ROOT_PASSWORD: \"\"\r\n       MYSQL_ALLOW_EMPTY_PASSWORD: \"yes\"\r\n-      MYSQL_DATABASE: cloud_computing\r\n+      MYSQL_DATABASE: microservices\r\n     ports:\r\n       - \"3306:3306\"\r\n     networks:\r\n       - my-network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706007578307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     restart: always\r\n     environment:\r\n       MYSQL_ROOT_PASSWORD: \"\"\r\n       MYSQL_ALLOW_EMPTY_PASSWORD: \"yes\"\r\n-      MYSQL_DATABASE: microservices\r\n+      MYSQL_DATABASE: python_app\r\n     ports:\r\n       - \"3306:3306\"\r\n     networks:\r\n       - my-network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706007621308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,30 @@\n-networks:\r\n-  my-network:\r\n+version: \"2.18.1\"\r\n+networks: \r\n+    my_network:\r\n services:\r\n-  read:\r\n-    build: \r\n-      context: .\r\n-      dockerfile: './read_service/DockerFile'\r\n+  \r\n+  read-services:\r\n+    build: ./read_service\r\n     ports:\r\n-      - '5001:5001'\r\n+      - \"5002:5002\"\r\n     networks:\r\n-      - my-network\r\n-  write:\r\n-    build: \r\n-      context: .\r\n-      dockerfile: './write_service/DockerFile'\r\n+      - my_network\r\n+  write-services:\r\n+    build: ./write_service\r\n     ports:\r\n-      - '5000:5000'\r\n+      - \"5001:5001\"\r\n     networks:\r\n-      - my-network  \r\n-    \r\n-  db:\r\n\\ No newline at end of file\n-    image: mysql:8.0\r\n+      - my_network\r\n+  database:\r\n+    image: mysql:latest\r\n     command: --default-authentication-plugin=mysql_native_password\r\n     restart: always\r\n     environment:\r\n-      MYSQL_ROOT_PASSWORD: \"\"\r\n-      MYSQL_ALLOW_EMPTY_PASSWORD: \"yes\"\r\n       MYSQL_DATABASE: python_app\r\n+      MYSQL_ROOT_PASSWORD: 123456789\r\n+      MYSQL_USER: dapravith\r\n+      MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"3306:3306\"\r\n+      - \"3307:3306\"\r\n     networks:\r\n-      - my-network\n+      - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706008678528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,18 @@\n-version: \"2.18.1\"\r\n-networks: \r\n-    my_network:\r\n+version: '3'\r\n+\r\n services:\r\n-  \r\n-  read-services:\r\n-    build: ./read_service\r\n+  write_service:\r\n+    build:\r\n+      context: ./write_service\r\n     ports:\r\n-      - \"5002:5002\"\r\n-    networks:\r\n-      - my_network\r\n-  write-services:\r\n-    build: ./write_service\r\n-    ports:\r\n       - \"5001:5001\"\r\n-    networks:\r\n-      - my_network\r\n-  database:\r\n-    image: mysql:latest\r\n-    command: --default-authentication-plugin=mysql_native_password\r\n-    restart: always\r\n-    environment:\r\n-      MYSQL_DATABASE: python_app\r\n-      MYSQL_ROOT_PASSWORD: 123456789\r\n-      MYSQL_USER: dapravith\r\n\\ No newline at end of file\n-      MYSQL_PASSWORD: 123456789\r\n+\r\n+  read_service:\r\n+    build:\r\n+      context: ./read_service\r\n     ports:\r\n-      - \"3307:3306\"\r\n-    networks:\r\n-      - my_network\n+      - \"5000:5000\"\r\n+    depends_on:\r\n+      - write_service\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1706013064397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,30 @@\n-version: '3'\r\n-\r\n+version: \"2.18.1\"\r\n+networks: \r\n+    my_network:\r\n services:\r\n-  write_service:\r\n-    build:\r\n-      context: ./write_service\r\n+  \r\n+  read-services:\r\n+    build: ./read_service\r\n     ports:\r\n+      - \"5002:5002\"\r\n+    networks:\r\n+      - my_network\r\n+  write-services:\r\n+    build: ./write_service\r\n+    ports:\r\n       - \"5001:5001\"\r\n-\r\n-  read_service:\r\n-    build:\r\n-      context: ./read_service\r\n+    networks:\r\n+      - my_network\r\n+  database:\r\n+    image: mysql:latest\r\n+    command: --default-authentication-plugin=mysql_native_password\r\n+    restart: always\r\n+    environment:\r\n+      MYSQL_DATABASE: python_app\r\n+      MYSQL_ROOT_PASSWORD: 123456789\r\n+      MYSQL_USER: dapravith\r\n+      MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"5000:5000\"\r\n-    depends_on:\r\n-      - write_service\r\n-\r\n-\r\n+      - \"3307:3306\"\r\n+    networks:\r\n+      - my_network\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706014358813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       MYSQL_ROOT_PASSWORD: 123456789\r\n       MYSQL_USER: dapravith\r\n       MYSQL_PASSWORD: 123456789\r\n     ports:\r\n-      - \"3307:3306\"\r\n+      - \"3306:3306\"\r\n     networks:\r\n       - my_network\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1705977522497,
+            "name": "Commit-0",
+            "content": "version: \"2.18.1\"\r\nnetworks: \r\n    my_network:\r\nservices:\r\n  \r\n  read-services:\r\n    build: ./read_service\r\n    ports:\r\n      - \"5002:5002\"\r\n    networks:\r\n      - my_network\r\n  write-services:\r\n    build: ./write_service\r\n    ports:\r\n      - \"5001:5001\"\r\n    networks:\r\n      - my_network\r\n  database:\r\n    image: mysql:latest\r\n    command: --default-authentication-plugin=mysql_native_password\r\n    restart: always\r\n    environment:\r\n      MYSQL_DATABASE: microservice_database_app\r\n      MYSQL_ROOT_PASSWORD: 12345\r\n      MYSQL_USER: dapravith\r\n      MYSQL_PASSWORD: 12345\r\n    ports:\r\n      - \"3306:3306\"\r\n    networks:\r\n      - my_network"
+        }
+    ]
+}

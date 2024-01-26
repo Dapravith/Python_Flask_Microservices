@@ -1,0 +1,33 @@
+version: "2.18.1"
+networks: 
+    my_network:
+services:
+  
+  read-services:
+    build: ./read_service
+    ports:
+      - "5002:5002"
+    networks:
+      - my_network
+  write-services:
+    build: ./write_service
+    ports:
+      - "5001:5001"
+    networks:
+      - my_network
+  database:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456789
+      MONGO_INITDB_DATABASE: python_app
+    ports:
+      - "27017:27017"  # Default port for MongoDB
+    networks:
+      - my_network
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

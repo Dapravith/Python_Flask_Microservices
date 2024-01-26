@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  write_service:
+    build:
+      context: ./write_service
+    ports:
+      - "5001:5001"
+
+  read_service:
+    build:
+      context: ./read_service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - write_service
+
+
